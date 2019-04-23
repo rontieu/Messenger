@@ -1,0 +1,15 @@
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE User(
+	Name VARCHAR(255) NOT NULL PRIMARY KEY, 
+	CONSTRAINT UIX_Name UNIQUE(Name)
+);
+
+CREATE TABLE Message(
+	UserName VARCHAR(255) NOT NULL,
+	Body VARCHAR(255), 
+	Timestamp DATETIME NOT NULL,
+	CONSTRAINT FK_User_Name FOREIGN KEY (UserName) REFERENCES User(Name),
+	PRIMARY KEY (UserName, Body, Timestamp)
+
+);

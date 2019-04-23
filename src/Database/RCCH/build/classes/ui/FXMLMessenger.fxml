@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLMessengerController">
+    <stylesheets>
+        <URL value="@fxmlmessenger.css" />
+    </stylesheets>
+   <children>
+      <SplitPane dividerPositions="0.8366834170854272" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="598.0">
+               <children>
+                  <JFXTextArea fx:id="chat_area" layoutY="-3.0" prefHeight="330.0" prefWidth="598.0" style="-fx-background-color: #2D3447; -fx-text-inner-color: WHITE;" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="598.0">
+               <children>
+                  <JFXTextField fx:id="tf_chatInput" layoutX="33.0" layoutY="19.0" onKeyPressed="#Send" prefHeight="62.0" prefWidth="598.0" promptText="Type your message..." style="-fx-prompt-text-fill: #C0C0C0; -fx-background-color: #2D3447; -fx-text-inner-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
